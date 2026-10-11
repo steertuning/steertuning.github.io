@@ -136,13 +136,8 @@ body :is(#policy-figure,.policy-context) :is(.sc-header > span,.sc-legend,.sc-co
 body :is(#policy-figure,.policy-context) :is(.sc-intro,.sc-result) { font:400 var(--type-body)/1.5 var(--serif); }
 body :is(#policy-figure,.policy-context) .sc-coordinate-name { font:600 var(--type-panel)/1.35 var(--serif); }
 
-/* Finetuning and steering use the same figure typography. */
-body :is(#policy-figure,.policy-context) :is(.ft-header button,.ft-demos span,.ft-base span,.ft-adapter span,.ft-ready span,.ft-footer span) {
-  font:400 var(--type-label)/1.5 var(--serif);
-}
-body :is(#policy-figure,.policy-context) :is(.ft-intro,.ft-footer) { font:400 var(--type-body)/1.5 var(--serif); }
-body :is(#policy-figure,.policy-context) :is(.ft-base strong,.ft-adapter strong,.ft-ready strong) { font:600 var(--type-panel)/1.35 var(--serif); }
-body :is(#policy-figure,.policy-context) .ft-demos strong { font:600 var(--type-section)/1.1 var(--serif); }
+/* Finetuning uses the shared figure label scale. */
+body .ft-training-node p { font:400 var(--type-label)/1.5 var(--serif); }
 
 /* The input/output example keeps language and phase labels prominent. */
 body :is(#policy-figure,.policy-context) :is(.ex-controls button,.ex-language span,.ex-flow h4 span,.ex-number,.ex-card-status,.ex-output-cover) { font:400 var(--type-label)/1.5 var(--serif); }
@@ -190,7 +185,7 @@ body :is(.subsection,.ablation-tables > article) > h3 {
 body .subsection + .subsection { margin-top:64px; }
 body .paper-section h4,
 body #in-the-wild-rollouts .rollout-pair h4,
-body .paper-section :is(.chart-title,.ag-toolbar h4,.ft-header h4,.sc-header h4,.ex-header h4) {
+body .paper-section :is(.chart-title,.ag-toolbar h4,.sc-header h4,.ex-header h4) {
   font:600 var(--type-panel)/1.35 var(--serif);
   color:var(--green);
   letter-spacing:0;

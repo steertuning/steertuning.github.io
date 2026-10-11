@@ -39,7 +39,6 @@ body #prepare .process-image-pair figcaption { min-height:3em; padding-top:8px; 
 body #prepare .process-playback { grid-column:1 / -1; margin-top:0; }
 body #prepare .process-description p { text-align:left; }
 body #prepare .process-panel { gap:12px; }
-body #finetune .ft-flow { margin-block:18px; }
 body #deploy #deployment { margin-top:0; }
 @container (min-width:801px) {
  #overview .transfer-grid { --transfer-gap:28px; grid-template-columns:1.18fr 1fr 1fr 1.18fr; }
@@ -82,9 +81,24 @@ body .object-task + .object-task {border-top:0;}
  body .object-score {flex-direction:column; align-items:flex-start; gap:4px;}
 }
 
-/* Actual task demonstrations feed the trainable adapters, then the robot. */
-body #finetune .ft-flow {grid-template-columns:minmax(0,1fr); gap:36px; justify-items:start;}
-body #finetune .ft-demos {grid-column:1 / -1; align-self:stretch; justify-self:stretch; min-width:0; padding:0; text-align:left;}
+/* All five demonstrations feed LoRA; the frozen base is the second input. */
+.ft-training-sequence {--ft-arrow-gap:48px; --ft-data-target:50%;}
+.ft-training-collector {position:relative; height:52px; margin-top:16px; color:#78916e;}
+.ft-training-collector::before {content:''; position:absolute; inset:0 0 auto; height:12px; border-inline:1px solid currentColor; border-bottom:1px solid currentColor;}
+.ft-training-collector > span {position:absolute; left:var(--ft-data-target); top:12px; bottom:0; width:1px; background:currentColor;}
+.ft-training-collector > span::after {content:''; position:absolute; left:-3px; bottom:1px; width:7px; height:7px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; transform:rotate(45deg);}
+.ft-training-row {display:grid; grid-template-columns:minmax(0,1fr) var(--ft-arrow-gap) minmax(0,1fr) var(--ft-arrow-gap) minmax(0,1fr); align-items:stretch;}
+.ft-training-node {min-width:0; min-height:136px; padding:22px; display:flex; flex-direction:column; justify-content:center; gap:8px; background:#f1f0e9;}
+body #finetune .ft-training-node h4 {margin:0; color:var(--ink); text-align:left;}
+body .ft-training-node p {margin:0; color:var(--muted);}
+.ft-training-base p {display:flex; align-items:center; gap:8px;}
+.ft-training-lock {width:18px; height:20px; flex:none; fill:none; stroke:currentColor; stroke-width:1.5;}
+.ft-training-update {background:#e4ecdf;}
+body #finetune .ft-training-update :is(h4,p) {color:var(--green);}
+.ft-training-result {background:var(--green);}
+body #finetune .ft-training-result h4 {color:var(--paper);}
+.ft-training-arrow {position:relative; height:1px; margin-inline:8px; align-self:center; color:#78916e; background:currentColor;}
+.ft-training-arrow::after {content:''; position:absolute; right:1px; top:-3px; width:7px; height:7px; border-top:1px solid currentColor; border-right:1px solid currentColor; transform:rotate(45deg);}
 .task-demo-toolbar {display:flex; align-items:center; flex-wrap:wrap; gap:12px 24px; margin-bottom:16px; color:var(--muted);}
 body .task-demo-toolbar h4 {margin:0; margin-right:auto;}
 .task-demo-toolbar button {padding:8px 0; min-height:44px; border:0; background:none; color:var(--green); cursor:pointer;}
@@ -94,15 +108,6 @@ body .task-demo-toolbar h4 {margin:0; margin-right:auto;}
 .task-demo-grid figure {margin:0; min-width:0;}
 .task-demo-grid video {display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; background:var(--paper); border-radius:0;}
 .task-demo-grid figcaption {margin-top:8px; color:var(--muted); text-align:left;}
-body #finetune .ft-policy {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px 32px; width:min(100%,780px); background:transparent;}
-body #finetune .ft-ready {grid-column:1 / -1; align-items:flex-start; margin:0; text-align:left;}
-body #finetune .ft-base {background:#f1f0e9; padding:20px;}
-body #finetune .ft-adapter {position:relative; padding:20px;}
-body #finetune .ft-adapter::before {content:'+'; position:absolute; left:-32px; top:50%; width:32px; color:var(--green); text-align:center; transform:translateY(-50%);}
-body #finetune .ft-connection-in {width:1px; height:calc(var(--type-panel) * 1.35 + 50px); top:auto; bottom:100%; left:50%; right:auto; margin:0;}
-body #finetune .ft-connection-in::after {right:-3px; top:auto; bottom:1px; transform:rotate(135deg);}
-body #finetune .ft-footer {justify-content:flex-start;}
-body #finetune .ft-running .ft-connection-in {animation:ft-output-flow 3.2s ease both;}
 #overview .human-photo {padding:0; background:transparent;}
 #overview .human-photo video {box-shadow:none;}
 #overview .demo-count {padding:0; background:transparent;}
@@ -110,11 +115,19 @@ body #finetune .ft-running .ft-connection-in {animation:ft-output-flow 3.2s ease
  .task-demo-grid {grid-template-columns:repeat(3,minmax(0,1fr));}
 }
 @media(max-width:760px) {
- body #finetune .ft-base, body #finetune .ft-adapter {padding:16px 12px;}
+ .ft-training-sequence {--ft-arrow-gap:28px; --ft-data-target:calc(75% + 7px);}
+ .ft-training-row {grid-template-columns:minmax(0,1fr) var(--ft-arrow-gap) minmax(0,1fr);}
+ .ft-training-node {min-height:0; padding:16px 12px;}
+ .ft-training-base {grid-column:1; grid-row:1;}
+ .ft-training-model-arrow {grid-column:2; grid-row:1; margin-inline:3px;}
+ .ft-training-update {grid-column:3; grid-row:1;}
+ .ft-training-result-arrow {grid-column:3; grid-row:2; width:1px; height:32px; margin:0; justify-self:center;}
+ .ft-training-result-arrow::after {right:-3px; top:auto; bottom:1px; transform:rotate(135deg);}
+ .ft-training-result {grid-column:3; grid-row:3;}
 }
 @media(max-width:480px) {
  .task-demo-grid {grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px 12px;}
- .task-demo-grid figure:last-child {grid-column:1 / -1; width:calc((100% - 12px)/2); justify-self:end;}
+ .task-demo-grid figure:last-child {grid-column:1 / -1; width:calc((100% - 12px)/2); justify-self:start;}
  .task-demo-toolbar {gap:8px 16px;}
  .task-demo-toolbar h4 {flex-basis:100%;}
 }
