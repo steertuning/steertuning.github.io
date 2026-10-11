@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="site-version" content="v2026.10.11.3"/>
+<meta name="site-version" content="v2026.10.11.4"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Steertuning Policies from a Few Human Videos | v2026.10.11.3</title>
+<title>Steertuning Policies from a Few Human Videos | v2026.10.11.4</title>
 <meta content="Billy Yan, Isaac Tu, Kelly Lee, Blake Chang, Kenny Ma, Kanad Patel, Dhawal Kabra, Neer Patel, Kevin Wu, Lerrel Pinto, Irmak Guzey" name="author"/>
 <meta content="Steertuning combines two-minute LoRA finetuning with demonstration-guided action steering to adapt robot policies from five human demonstrations. Research project page." name="description"/>
 <meta content="#fcf8f3" name="theme-color"/>
@@ -34,7 +34,7 @@
 <script defer="" src="charts.js?v=45065c1481dd"></script>
 <script defer="" src="plot-data.js?v=8da1460b7550"></script>
 <script defer="" src="plots.js?v=3576fdec4dd9"></script>
-<link href="simplify.css?v=275721d3491d" rel="stylesheet"/><link href="transfer.css?v=e05e9e7faf32" rel="stylesheet"/><script defer="True" src="transfer.js?v=281160723836"></script><link href="steering.css?v=b7bccf16c607" rel="stylesheet"/><script defer="" src="steering.js?v=63ff3598092b"></script><link href="steering-coordinates.css?v=78d78edebc8f" rel="stylesheet"/><link href="story.css?v=b65210132762" rel="stylesheet"/><link href="dataset.css?v=b8ac4d398157" rel="stylesheet"/><link href="contact.css?v=1c7b4871741f" rel="stylesheet"/><script defer="" src="contact.js?v=95291bc1c562"></script><link href="typography.css?v=5dc24629fa07" rel="stylesheet"/>
+<link href="simplify.css?v=275721d3491d" rel="stylesheet"/><link href="transfer.css?v=e05e9e7faf32" rel="stylesheet"/><script defer="True" src="transfer.js?v=281160723836"></script><link href="steering.css?v=b7bccf16c607" rel="stylesheet"/><script defer="" src="steering.js?v=63ff3598092b"></script><link href="steering-coordinates.css?v=78d78edebc8f" rel="stylesheet"/><link href="story.css?v=0cf276ec4f02" rel="stylesheet"/><link href="dataset.css?v=b8ac4d398157" rel="stylesheet"/><link href="contact.css?v=1c7b4871741f" rel="stylesheet"/><script defer="" src="contact.js?v=95291bc1c562"></script><link href="typography.css?v=5dc24629fa07" rel="stylesheet"/>
 <script defer="" src="dataset.js?v=ae42fee46d3e"></script><script defer src="task-demos.js?v=2d40080149fe"></script></head>
 <body>
 <a class="skip-link" href="#abstract">Skip to research content</a>
@@ -277,7 +277,7 @@ Steertuning:
 <p class="sc-result" data-coordinate-result=""></p>
 <p class="sm-note">We shift the right-hand demo toward a virtual bread target, then rerun steering with the same noise seed. The camera observation stays fixed; the video shows the original recording. WUJI poses are retargeted and interpolated. This measures target alignment, not a physical grasp.</p>
 <span aria-live="polite" class="sr-only" data-coordinate-announcement=""></span>
-</section></div><p class="story-transition">Retarget the resulting hand motion into robot commands, then execute it in the full system.</p></section><section aria-labelledby="deploy-title" class="paper-section container story-chapter" id="deploy"><h2 id="deploy-title"><span aria-hidden="true" class="section-number">06</span><span class="section-heading-text">Put the skill to work on the robot</span></h2><p class="story-lead">The learned manipulation policy is one part of deployment. Retargeting, navigation, and a task planner connect its predictions to complete robot actions.</p><article class="subsection task-demo-execution" id="task-execution"><h3>Execute the demonstrated task</h3><p>The robot carries out the paper-disposal task shown in the five demonstrations.</p><figure data-task-demo-group><div class="task-demo-toolbar"><h4>Paper disposal</h4><span>4× speed</span><button type="button" data-task-demo-toggle hidden>Pause clips</button></div><video aria-label="Paper disposal: robot execution, shown at four times speed" data-task-demo-video controls loop muted playsinline preload="none" width="1280" height="720" poster="assets/task-demos/paper-disposal/robot-execution.jpg?v=a9da08595dab" data-src="assets/task-demos/paper-disposal/robot-execution.mp4?v=cb0bb26144d6"><a href="assets/task-demos/paper-disposal/robot-execution.mp4?v=cb0bb26144d6">Open video</a></video><p data-task-demo-status hidden role="status"></p></figure></article><article class="subsection" id="deployment">
+</section></div><p class="story-transition">Retarget the resulting hand motion into robot commands, then execute it in the full system.</p></section><section aria-labelledby="deploy-title" class="paper-section container story-chapter" id="deploy"><h2 id="deploy-title"><span aria-hidden="true" class="section-number">06</span><span class="section-heading-text">Put the skill to work on the robot</span></h2><p class="story-lead">The learned manipulation policy is one part of deployment. Retargeting, navigation, and a task planner connect its predictions to complete robot actions.</p><article class="subsection" id="deployment">
 <h3>Connect the policy to the full robot system</h3>
 <figure class="research-figure">
 <div class="deployment-explainer" id="deployment-figure">
@@ -466,7 +466,7 @@ Steertuning:
 </div>
 </section></main>
 <footer class="page-footer container">
-<span>Steertuning v2026.10.11.3</span><a href="#top">Back to top</a>
+<span>Steertuning v2026.10.11.4</span><a href="#top">Back to top</a>
 </footer>
 </body>
 </html>
