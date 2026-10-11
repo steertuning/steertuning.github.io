@@ -1,0 +1,7 @@
+{
+  "file": "gemini.png",
+  "source_page": "https://gemini.google.com/",
+  "source_asset": "https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png",
+  "sha256": "5e7cfecaa53f4f65a313fe89b0f389548126544a78fad8489510c70ae641a4a1",
+  "attribution": "Gemini mark, Google. Used to identify the VLM in the paper; unmodified."
+}

@@ -1,0 +1,11 @@
+{
+  "source": "processing-mask.webm",
+  "output": "processing-mask.mp4",
+  "sha256": "bbb518abcbb0956e42d73b2ae9d17ec3b94e3afbbb8325f59b1d90d6b4e11c0b",
+  "encoding": "H.264 / yuv420p / faststart / no audio",
+  "frames": 80,
+  "fps": 10,
+  "duration_seconds": 8,
+  "purpose": "Browser-compatible object mask used by data processing and Figure 3",
+  "annotation": "Existing binary object annotation; no new segmentation or inference."
+}

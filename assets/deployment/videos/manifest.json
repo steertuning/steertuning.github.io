@@ -1,0 +1,93 @@
+{
+  "purpose": "User-supplied full-stack rollouts for Figure 5",
+  "additional_playback_speed": 1,
+  "audio": false,
+  "complete_source_content": true,
+  "cropped": false,
+  "clips": [
+    {
+      "label": "Cup disposal",
+      "video": "trash.mp4",
+      "poster": "poster-trash.jpg",
+      "poster_time_seconds": 20.0,
+      "duration_seconds": 42.042,
+      "frame_count": 1260,
+      "width": 1280,
+      "height": 720,
+      "frame_rate": "30000/1001",
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "size_bytes": 7000341,
+      "sha256": "176dd90201970a71f6c0f91c04c9590c9ce355227cf9957d819c93c77d76877d",
+      "audio": false,
+      "source": {
+        "filename": "throw trash.mp4",
+        "sha256": "de2ba63615078680dc69b44340188a5d00bf8ba0aeb84d4cb9293bbc0b1b5c21",
+        "duration_seconds": 42.042,
+        "frame_count": 1260,
+        "width": 1920,
+        "height": 1080
+      },
+      "additional_playback_speed": 1,
+      "trimmed": false,
+      "cropped": false,
+      "note": "The supplied edit has a burned-in 6X FULLY AUTONOMOUS label; no additional speed change is applied."
+    },
+    {
+      "label": "Table wiping",
+      "video": "full-stack-2.mp4",
+      "poster": "poster-full-stack-2.jpg",
+      "poster_time_seconds": 8.0,
+      "duration_seconds": 10.2102,
+      "frame_count": 306,
+      "width": 1280,
+      "height": 720,
+      "frame_rate": "30000/1001",
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "size_bytes": 1151454,
+      "sha256": "df31c29856fcbbb6bb917b0b10d8a666d7a1da470f36a5a3b0cae8588be6349d",
+      "audio": false,
+      "source": {
+        "filename": "full-stack_2.mp4",
+        "sha256": "7de1c8018c542dafdb975a5a470fc977eee28bc698edbbd19ea482f7ebd99aaf",
+        "duration_seconds": 10.2102,
+        "frame_count": 306,
+        "width": 1920,
+        "height": 1080
+      },
+      "additional_playback_speed": 1,
+      "trimmed": false,
+      "cropped": false,
+      "note": "The supplied edit is preserved at its existing playback timing."
+    },
+    {
+      "label": "Bag retrieval",
+      "video": "full-stack-1.mp4",
+      "poster": "poster-full-stack-1.jpg",
+      "poster_time_seconds": 7.0,
+      "duration_seconds": 11.644967,
+      "frame_count": 349,
+      "width": 1280,
+      "height": 720,
+      "frame_rate": "30000/1001",
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "size_bytes": 3051460,
+      "sha256": "ddb9c3419c30b2eaf7152b50ff650176c55a28c1a604b39d431851e681ad40c3",
+      "audio": false,
+      "source": {
+        "filename": "full_stack_1`.mp4",
+        "sha256": "f5be70bc33c63a6f43e0824f53d101262bdab5ef98d496c69df1fbae0dd3a499",
+        "duration_seconds": 11.644967,
+        "frame_count": 349,
+        "width": 1920,
+        "height": 1080
+      },
+      "additional_playback_speed": 1,
+      "trimmed": false,
+      "cropped": false,
+      "note": "The supplied edit is preserved at its existing playback timing."
+    }
+  ]
+}

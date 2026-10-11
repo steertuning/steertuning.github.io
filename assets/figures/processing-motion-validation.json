@@ -1,0 +1,70 @@
+{
+  "complete_decode": true,
+  "video_checks": [
+    {
+      "path": "videos/record-rgb.mp4",
+      "frames": 80,
+      "unique_decoded_frames": 80,
+      "duration_seconds": 8,
+      "bytes": 535483
+    },
+    {
+      "path": "videos/cloud-before.webm",
+      "frames": 80,
+      "unique_decoded_frames": 80,
+      "duration_seconds": 8,
+      "bytes": 1555544,
+      "alpha_mean_absolute_error_to_poster": 0.13997721354166667
+    },
+    {
+      "path": "videos/cloud-after.webm",
+      "frames": 80,
+      "unique_decoded_frames": 80,
+      "duration_seconds": 8,
+      "bytes": 1686803,
+      "alpha_mean_absolute_error_to_poster": 0.12588216145833334
+    },
+    {
+      "path": "videos/object-mask.webm",
+      "frames": 80,
+      "unique_decoded_frames": 80,
+      "duration_seconds": 8,
+      "bytes": 252128,
+      "decoded_binary_values": [
+        0,
+        255
+      ],
+      "five_source_masks_match_decoded_frames_exactly": true
+    },
+    {
+      "path": "videos/cloud-sampled.webm",
+      "frames": 80,
+      "unique_decoded_frames": 80,
+      "duration_seconds": 8,
+      "bytes": 5893559,
+      "alpha_mean_absolute_error_to_poster": 0.5880729166666666
+    },
+    {
+      "path": "videos/model-mask-native.webm",
+      "frames": 80,
+      "unique_decoded_frames": 80,
+      "duration_seconds": 8,
+      "bytes": 98969
+    },
+    {
+      "path": "videos/cloud-sampled-cream.mp4",
+      "frames": 80,
+      "unique_decoded_frames": 80,
+      "duration_seconds": 8,
+      "bytes": 1726587,
+      "rgb_mean_absolute_error_to_poster": 3.7508723958333334,
+      "alpha": false,
+      "background": "#f4f0e6"
+    }
+  ],
+  "asset_checksums_verified": 14,
+  "source_timing_verified_frames": 80,
+  "max_camera_mapping_error": 0.0,
+  "source_midframes_match_existing_processing_stills": true,
+  "predicted_noise_available": false
+}
