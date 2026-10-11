@@ -22,7 +22,7 @@
     {
       assetBase: "assets/contact/processing/",
       duration: 4.8,
-      input: "rgb.png", inputVideo: "rgb.mp4",
+      input: "rgb.png?v=060eddf08ed0", inputVideo: "rgb.mp4?v=bd43647421e0",
       inputAlt: "Bread placement interaction from the same oven recording",
       inputCaption: "Scene with hands",
       output: "cloud.png", outputVideo: "cloud.webm",
@@ -33,10 +33,10 @@
     {
       assetBase: "assets/contact/processing/",
       duration: 4.8,
-      input: "rgb.png", inputVideo: "rgb.mp4",
+      input: "rgb.png?v=060eddf08ed0", inputVideo: "rgb.mp4?v=bd43647421e0",
       inputAlt: "Selected bread pickup and placement interaction clip",
       inputCaption: "Interaction clip",
-      output: "overlay.png", outputVideo: "overlay.mp4",
+      output: "overlay.png?v=acd3cb81ceec", outputVideo: "overlay.mp4?v=0ffccf250f86",
       outputAlt: "The bread mask highlighted in green over the matching clip frame",
       outputCaption: "Bread mask",
       copy: "Bread mask + “put the bread into the oven.”",

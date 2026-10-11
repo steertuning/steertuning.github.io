@@ -1,4 +1,4 @@
-# Steertuning v2026.10.11.1
+# Steertuning v2026.10.11.2
 
 Research website for **Steertuning Policies from a Few Human Videos**.
 

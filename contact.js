@@ -76,7 +76,7 @@
  }
 
  const flights=[...annotation.querySelectorAll('.annotation-clips img')].map((image,i)=>({image,src:image.getAttribute('src'),target:annotation.querySelector('.qwen-model'),start:3400+i*850,length:1150}));
- flights.push({image:video,src:'assets/contact/grounding/frame-123.jpg',target:annotation.querySelector('.gemini-model'),start:12800,length:1300});
+ flights.push({image:video,src:'assets/contact/grounding/frame-123.jpg?v=29579191bd69',target:annotation.querySelector('.gemini-model'),start:12800,length:1300});
  flights.forEach(flight=>{const ghost=document.createElement('img');ghost.src=flight.src;ghost.alt='';ghost.className='annotation-feed-clip';ghost.setAttribute('aria-hidden','true');annotation.append(ghost);flight.ghost=ghost;});
  const pointGhost=document.createElement('i');pointGhost.className='annotation-prompt-flight';pointGhost.setAttribute('aria-hidden','true');annotation.append(pointGhost);
  function paintFeed(t){
@@ -270,7 +270,7 @@
  const observer=new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;if(visible&&scanVisible&&data&&!started){started=true;if(!reduced.matches)playing=true;}sync();},{threshold:0});observer.observe(root);
  const scanObserver=new IntersectionObserver(([entry])=>{scanVisible=entry.isIntersecting&&entry.intersectionRatio>=.15;if(scanVisible&&visible&&data&&!started){started=true;if(!reduced.matches)playing=true;sync();}},{threshold:.15});scanObserver.observe(svg);
  let plotWidth=0;const resize=new ResizeObserver(()=>{if(chart.clientWidth!==plotWidth){plotWidth=chart.clientWidth;build();}});resize.observe(chart);
- fetch('assets/contact/example.json').then(r=>{if(!r.ok)throw Error('Contact example could not load');return r.json();}).then(value=>{
+ fetch('assets/contact/example.json?v=813a70831e80').then(r=>{if(!r.ok)throw Error('Contact example could not load');return r.json();}).then(value=>{
   for(let f=pickup.start;f<=pickup.end;f++){const mask=new Image();maskFrames.set(f,mask);mask.src=`assets/contact/grounding/prompt-mask-${f}.png`;}
   data=value;plotSamples=emaSamples(data.samples,displayAlpha);frame=reduced.matches?data.totalFrames:0;seek.max=String(data.totalFrames);video.src=data.video;video.poster=data.poster;video.playbackRate=scanPlaybackRate;video.addEventListener('loadedmetadata',()=>{video.currentTime=timeAt(annotationStarted?annotationFrame():frame);sync();},{once:true});
   for(const c of data.clips){const button=document.createElement('button');button.type='button';button.className='contact-clip';button.style.setProperty('--clip-length',c.end-c.start);button.style.setProperty('--clip-color',colors[c.hand]);button.setAttribute('aria-label',`${names[c.hand]}${c.hand==='None'?' interval':' hand clip'}, frames ${c.start} to ${c.end}. Inspect this interval.`);const label=document.createElement('span');label.textContent=names[c.hand];button.append(label);button.addEventListener('click',()=>{jump(Math.round((c.start+c.end)/2));});clipsHost.append(button);}

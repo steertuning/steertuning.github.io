@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="site-version" content="v2026.10.11.1"/>
+<meta name="site-version" content="v2026.10.11.2"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Steertuning Policies from a Few Human Videos | v2026.10.11.1</title>
+<title>Steertuning Policies from a Few Human Videos | v2026.10.11.2</title>
 <meta content="Billy Yan, Isaac Tu, Kelly Lee, Blake Chang, Kenny Ma, Kanad Patel, Dhawal Kabra, Neer Patel, Kevin Wu, Lerrel Pinto, Irmak Guzey" name="author"/>
 <meta content="Steertuning combines two-minute LoRA finetuning with demonstration-guided action steering to adapt robot policies from five human demonstrations. Research project page." name="description"/>
 <meta content="#fcf8f3" name="theme-color"/>
@@ -28,13 +28,13 @@
 <script defer="" src="teaser.js?v=5a2f2d5e54e9"></script>
 <script defer="" src="graph-layouts.js?v=2fe974c05c2b"></script>
 <script defer="" src="architecture.js?v=cea584689651"></script>
-<script defer="" src="figures.js?v=2be1566a60dc"></script>
+<script defer="" src="figures.js?v=243c195b8124"></script>
 <script defer="" src="rollout-data.js?v=137ee023ff16"></script>
 <script defer="" src="script.js?v=ac9e7cc5bf89"></script>
 <script defer="" src="charts.js?v=45065c1481dd"></script>
 <script defer="" src="plot-data.js?v=8da1460b7550"></script>
 <script defer="" src="plots.js?v=3576fdec4dd9"></script>
-<link href="simplify.css?v=275721d3491d" rel="stylesheet"/><link href="transfer.css?v=e05e9e7faf32" rel="stylesheet"/><script defer="True" src="transfer.js?v=281160723836"></script><link href="steering.css?v=b7bccf16c607" rel="stylesheet"/><script defer="" src="steering.js?v=9baba1ec4128"></script><link href="steering-coordinates.css?v=78d78edebc8f" rel="stylesheet"/><link href="story.css?v=5caddbce2d38" rel="stylesheet"/><link href="dataset.css?v=b8ac4d398157" rel="stylesheet"/><link href="contact.css?v=1c7b4871741f" rel="stylesheet"/><script defer="" src="contact.js?v=9c7dee44f852"></script><link href="typography.css?v=5dc24629fa07" rel="stylesheet"/>
+<link href="simplify.css?v=275721d3491d" rel="stylesheet"/><link href="transfer.css?v=e05e9e7faf32" rel="stylesheet"/><script defer="True" src="transfer.js?v=281160723836"></script><link href="steering.css?v=b7bccf16c607" rel="stylesheet"/><script defer="" src="steering.js?v=9baba1ec4128"></script><link href="steering-coordinates.css?v=78d78edebc8f" rel="stylesheet"/><link href="story.css?v=5caddbce2d38" rel="stylesheet"/><link href="dataset.css?v=b8ac4d398157" rel="stylesheet"/><link href="contact.css?v=1c7b4871741f" rel="stylesheet"/><script defer="" src="contact.js?v=95291bc1c562"></script><link href="typography.css?v=5dc24629fa07" rel="stylesheet"/>
 <script defer="" src="dataset.js?v=ae42fee46d3e"></script><script defer src="task-demos.js?v=2d40080149fe"></script></head>
 <body>
 <a class="skip-link" href="#abstract">Skip to research content</a>
@@ -147,7 +147,7 @@ Steertuning:
 <div class="annotation-model qwen-model"><img src="assets/contact/grounding/qwen.svg" alt="Qwen logo" width="36" height="36"/><div><strong>Qwen</strong><span>Describe the clip</span></div></div>
 <div class="annotation-model gemini-model"><img src="assets/deployment/gemini.png" alt="Gemini logo" width="36" height="36"/><div><strong>Gemini</strong><span>Locate the bread</span></div></div>
 <div class="annotation-model sam-model"><div class="meta-symbol" role="img" aria-label="Meta symbol"><img class="meta-logo" src="assets/contact/grounding/meta-logo.webp" alt="" width="336" height="68"/></div><div><strong>SAM</strong><span data-sam-description>Point → mask</span></div></div>
-<div class="annotation-clips"><figure><img src="assets/contact/grounding/frame-95.jpg" alt="Right hand approaching bread on the plate before grasp"/><figcaption>9.5 s: Approach</figcaption></figure><figure><img src="assets/contact/grounding/frame-111.jpg" alt="Right hand closing around the bread"/><figcaption>11.1 s: Grasp</figcaption></figure><figure><img src="assets/contact/grounding/frame-123.jpg" alt="Right hand lifting bread off the plate"/><figcaption>12.3 s: Lift</figcaption></figure></div>
+<div class="annotation-clips"><figure><img src="assets/contact/grounding/frame-95.jpg?v=1416f60e2cf9" alt="Right hand approaching bread on the plate before grasp"/><figcaption>9.5 s: Approach</figcaption></figure><figure><img src="assets/contact/grounding/frame-111.jpg?v=5786c2ec06f8" alt="Right hand closing around the bread"/><figcaption>11.1 s: Grasp</figcaption></figure><figure><img src="assets/contact/grounding/frame-123.jpg?v=29579191bd69" alt="Right hand lifting bread off the plate"/><figcaption>12.3 s: Lift</figcaption></figure></div>
 <i class="annotation-point" aria-label="Foreground prompt point on the bread"></i>
 <svg class="annotation-mask-layer" viewBox="0 0 640 480" aria-hidden="true"><defs><mask id="contact-bread-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="640" height="480" style="mask-type:luminance"><image data-contact-mask x="80" y="120" width="480" height="360" href="assets/contact/grounding/prompt-mask-95.png" preserveAspectRatio="none"/></mask></defs><rect width="640" height="480" fill="#14aa80" opacity=".65" mask="url(#contact-bread-mask)"/></svg>
 <span class="annotation-propagation-direction" data-propagation-direction></span>
@@ -467,7 +467,7 @@ Steertuning:
 </div>
 </section></main>
 <footer class="page-footer container">
-<span>Steertuning v2026.10.11.1</span><a href="#top">Back to top</a>
+<span>Steertuning v2026.10.11.2</span><a href="#top">Back to top</a>
 </footer>
 </body>
 </html>
