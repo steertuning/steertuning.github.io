@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="site-version" content="v2026.10.11.2"/>
+<meta name="site-version" content="v2026.10.11.3"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Steertuning Policies from a Few Human Videos | v2026.10.11.2</title>
+<title>Steertuning Policies from a Few Human Videos | v2026.10.11.3</title>
 <meta content="Billy Yan, Isaac Tu, Kelly Lee, Blake Chang, Kenny Ma, Kanad Patel, Dhawal Kabra, Neer Patel, Kevin Wu, Lerrel Pinto, Irmak Guzey" name="author"/>
 <meta content="Steertuning combines two-minute LoRA finetuning with demonstration-guided action steering to adapt robot policies from five human demonstrations. Research project page." name="description"/>
 <meta content="#fcf8f3" name="theme-color"/>
@@ -34,7 +34,7 @@
 <script defer="" src="charts.js?v=45065c1481dd"></script>
 <script defer="" src="plot-data.js?v=8da1460b7550"></script>
 <script defer="" src="plots.js?v=3576fdec4dd9"></script>
-<link href="simplify.css?v=275721d3491d" rel="stylesheet"/><link href="transfer.css?v=e05e9e7faf32" rel="stylesheet"/><script defer="True" src="transfer.js?v=281160723836"></script><link href="steering.css?v=b7bccf16c607" rel="stylesheet"/><script defer="" src="steering.js?v=9baba1ec4128"></script><link href="steering-coordinates.css?v=78d78edebc8f" rel="stylesheet"/><link href="story.css?v=5caddbce2d38" rel="stylesheet"/><link href="dataset.css?v=b8ac4d398157" rel="stylesheet"/><link href="contact.css?v=1c7b4871741f" rel="stylesheet"/><script defer="" src="contact.js?v=95291bc1c562"></script><link href="typography.css?v=5dc24629fa07" rel="stylesheet"/>
+<link href="simplify.css?v=275721d3491d" rel="stylesheet"/><link href="transfer.css?v=e05e9e7faf32" rel="stylesheet"/><script defer="True" src="transfer.js?v=281160723836"></script><link href="steering.css?v=b7bccf16c607" rel="stylesheet"/><script defer="" src="steering.js?v=63ff3598092b"></script><link href="steering-coordinates.css?v=78d78edebc8f" rel="stylesheet"/><link href="story.css?v=b65210132762" rel="stylesheet"/><link href="dataset.css?v=b8ac4d398157" rel="stylesheet"/><link href="contact.css?v=1c7b4871741f" rel="stylesheet"/><script defer="" src="contact.js?v=95291bc1c562"></script><link href="typography.css?v=5dc24629fa07" rel="stylesheet"/>
 <script defer="" src="dataset.js?v=ae42fee46d3e"></script><script defer src="task-demos.js?v=2d40080149fe"></script></head>
 <body>
 <a class="skip-link" href="#abstract">Skip to research content</a>
@@ -260,13 +260,12 @@ Steertuning:
 <div aria-label="Five human demonstrations train LoRA adapters while the pretrained base weights remain frozen, producing a task-adapted policy." class="ft-flow">
 <div class="ft-demos" data-task-demo-group><div class="task-demo-toolbar"><h4>Five paper-disposal demonstrations</h4><span>4× speed</span><button type="button" data-task-demo-toggle hidden>Pause clips</button></div><div class="task-demo-grid"><figure><video aria-label="Paper disposal: human demonstration 1, shown at four times speed" data-task-demo-video controls loop muted playsinline preload="none" width="1280" height="720" poster="assets/task-demos/paper-disposal/human-demo-1.jpg?v=973519dace9a" data-src="assets/task-demos/paper-disposal/human-demo-1.mp4?v=8fe45dbcaf86"><a href="assets/task-demos/paper-disposal/human-demo-1.mp4?v=8fe45dbcaf86">Open video</a></video><figcaption>Demo 1</figcaption></figure><figure><video aria-label="Paper disposal: human demonstration 2, shown at four times speed" data-task-demo-video controls loop muted playsinline preload="none" width="1280" height="720" poster="assets/task-demos/paper-disposal/human-demo-2.jpg?v=f9e26537dbb0" data-src="assets/task-demos/paper-disposal/human-demo-2.mp4?v=1bdcac0bc65d"><a href="assets/task-demos/paper-disposal/human-demo-2.mp4?v=1bdcac0bc65d">Open video</a></video><figcaption>Demo 2</figcaption></figure><figure><video aria-label="Paper disposal: human demonstration 3, shown at four times speed" data-task-demo-video controls loop muted playsinline preload="none" width="1280" height="720" poster="assets/task-demos/paper-disposal/human-demo-3.jpg?v=22ef59391da4" data-src="assets/task-demos/paper-disposal/human-demo-3.mp4?v=c764a1274b41"><a href="assets/task-demos/paper-disposal/human-demo-3.mp4?v=c764a1274b41">Open video</a></video><figcaption>Demo 3</figcaption></figure><figure><video aria-label="Paper disposal: human demonstration 4, shown at four times speed" data-task-demo-video controls loop muted playsinline preload="none" width="1280" height="720" poster="assets/task-demos/paper-disposal/human-demo-4.jpg?v=47fb9241f986" data-src="assets/task-demos/paper-disposal/human-demo-4.mp4?v=28acbc8f66a9"><a href="assets/task-demos/paper-disposal/human-demo-4.mp4?v=28acbc8f66a9">Open video</a></video><figcaption>Demo 4</figcaption></figure><figure><video aria-label="Paper disposal: human demonstration 5, shown at four times speed" data-task-demo-video controls loop muted playsinline preload="none" width="1280" height="720" poster="assets/task-demos/paper-disposal/human-demo-5.jpg?v=caeb503be869" data-src="assets/task-demos/paper-disposal/human-demo-5.mp4?v=c3f373faa5c5"><a href="assets/task-demos/paper-disposal/human-demo-5.mp4?v=c3f373faa5c5">Open video</a></video><figcaption>Demo 5</figcaption></figure></div><p data-task-demo-status hidden role="status"></p></div>
 <div class="ft-policy">
-<div class="ft-base"><strong>Pretrained policy</strong><span><svg aria-hidden="true" class="ft-lock" viewbox="0 0 18 20"><rect height="9" rx="2" width="12" x="3" y="9"></rect><path d="M5 9V6a4 4 0 0 1 8 0v3"></path><path d="M9 12v3"></path></svg>Frozen</span></div>
-<div class="ft-adapter"><strong>LoRA adapters</strong><span>Train on five demos</span></div>
-<span aria-hidden="true" class="ft-connection ft-connection-in"></span><span aria-hidden="true" class="ft-connection ft-connection-out"></span>
-</div>
 <div class="ft-ready"><strong>Task-adapted policy</strong></div>
+<div class="ft-base"><strong>Pretrained policy</strong><span><svg aria-hidden="true" class="ft-lock" viewbox="0 0 18 20"><rect height="9" rx="2" width="12" x="3" y="9"></rect><path d="M5 9V6a4 4 0 0 1 8 0v3"></path><path d="M9 12v3"></path></svg>Frozen</span></div>
+<div class="ft-adapter"><strong>LoRA adapters</strong><span>Train on five demos</span><span aria-hidden="true" class="ft-connection ft-connection-in"></span></div>
 </div>
-<p class="ft-footer">2,000 training updates.<span>Schematic training illustration</span></p>
+</div>
+<p class="ft-footer">2,000 training updates.<span>Schematic illustration</span></p>
 </section></div><p class="story-transition">Keep these demonstrations: the next stage reuses one of them to guide the adapted policy.</p></section><section aria-labelledby="steer-title" class="paper-section container story-chapter" id="steer"><h2 id="steer-title"><span aria-hidden="true" class="section-number">05</span><span class="section-heading-text">Steer with a matching demonstration</span></h2><p class="story-lead">At deployment, select the demonstration whose observation best matches the robot’s scene. Use it to guide each reverse-sampling step of the finetuned policy.</p><div class="policy-context"><section aria-labelledby="steering-title" class="steering-story" id="steering-deployment">
 <header class="sc-header"><h4 id="steering-title">What if the bread moved?</h4><span data-coordinate-example="">Controlled experiment: target shifted 10 cm</span></header>
 <div aria-label="3D WUJI hand trajectory and steering correction" class="sc-stage" data-coordinate-plots=""><p data-coordinate-loading="">Loading the recorded hand poses…</p></div>
@@ -467,7 +466,7 @@ Steertuning:
 </div>
 </section></main>
 <footer class="page-footer container">
-<span>Steertuning v2026.10.11.2</span><a href="#top">Back to top</a>
+<span>Steertuning v2026.10.11.3</span><a href="#top">Back to top</a>
 </footer>
 </body>
 </html>
