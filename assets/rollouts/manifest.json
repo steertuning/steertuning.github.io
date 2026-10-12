@@ -1,7 +1,7 @@
 {
   "source_collection": "User-supplied materials, 2026-10-08",
   "pairing": "Visually verified same-task human and robot recordings; not synchronized trials",
-  "encoding": "H.264, yuv420p, 30 fps, faststart; 4\u00d7 speed baked into video; no audio streams. Original exports use CRF 21; replacement-specific encoding settings are recorded per asset.",
+  "encoding": "Per-asset encoding and playback provenance is recorded below; user-supplied replacement edits may retain their original timing.",
   "assets": [
     {
       "source": "icra(16).mp4",
@@ -20,7 +20,7 @@
       "fps": "30/1",
       "codec": "h264",
       "audio": "Removed; no audio stream",
-      "edit": "Full source sequence at 4\u00d7 speed; no cropping or trimming"
+      "edit": "Full source sequence at 4× speed; no cropping or trimming"
     },
     {
       "source": "icra(2).mp4",
@@ -39,7 +39,7 @@
       "fps": "30/1",
       "codec": "h264",
       "audio": "Removed; no audio stream",
-      "edit": "Full source sequence at 4\u00d7 speed; no cropping or trimming"
+      "edit": "Full source sequence at 4× speed; no cropping or trimming"
     },
     {
       "source": "icra(17).mp4",
@@ -58,7 +58,7 @@
       "fps": "30/1",
       "codec": "h264",
       "audio": "Removed; no audio stream",
-      "edit": "Full source sequence at 4\u00d7 speed; no cropping or trimming"
+      "edit": "Full source sequence at 4× speed; no cropping or trimming"
     },
     {
       "source": "icra(3).mp4",
@@ -77,7 +77,7 @@
       "fps": "30/1",
       "codec": "h264",
       "audio": "Removed; no audio stream",
-      "edit": "Full source sequence at 4\u00d7 speed; no cropping or trimming"
+      "edit": "Full source sequence at 4× speed; no cropping or trimming"
     },
     {
       "source": "icra(15).mp4",
@@ -97,8 +97,8 @@
       "fps": "30/1",
       "codec": "h264",
       "audio": "Removed; no audio stream",
-      "encoding": "H.264 CRF 23, max 1.2 Mbps, at most 854 \u00d7 480, 2-second keyframes, faststart",
-      "edit": "Full source sequence at 4\u00d7 speed; crop=720:270:0:210 removes reflected head; no temporal trimming"
+      "encoding": "H.264 CRF 23, max 1.2 Mbps, at most 854 × 480, 2-second keyframes, faststart",
+      "edit": "Full source sequence at 4× speed; crop=720:270:0:210 removes reflected head; no temporal trimming"
     },
     {
       "source": "icra(6).mp4",
@@ -117,7 +117,7 @@
       "fps": "30/1",
       "codec": "h264",
       "audio": "Removed; no audio stream",
-      "edit": "Full source sequence at 4\u00d7 speed; no cropping or trimming"
+      "edit": "Full source sequence at 4× speed; no cropping or trimming"
     },
     {
       "source": "icra(19).mp4",
@@ -136,7 +136,7 @@
       "fps": "30/1",
       "codec": "h264",
       "audio": "Removed; no audio stream",
-      "edit": "Full source sequence at 4\u00d7 speed; no cropping or trimming"
+      "edit": "Full source sequence at 4× speed; no cropping or trimming"
     },
     {
       "source": "icra(11).mp4",
@@ -155,7 +155,7 @@
       "fps": "30/1",
       "codec": "h264",
       "audio": "Removed; no audio stream",
-      "edit": "Full source sequence at 4\u00d7 speed; no cropping or trimming"
+      "edit": "Full source sequence at 4× speed; no cropping or trimming"
     },
     {
       "source": "icra(20).mp4",
@@ -175,8 +175,8 @@
       "fps": "30/1",
       "codec": "h264",
       "audio": "Removed; no audio stream",
-      "encoding": "H.264 CRF 23, max 1.2 Mbps, at most 854 \u00d7 480, 2-second keyframes, faststart",
-      "edit": "Full source sequence at 4\u00d7 speed; no cropping or trimming"
+      "encoding": "H.264 CRF 23, max 1.2 Mbps, at most 854 × 480, 2-second keyframes, faststart",
+      "edit": "Full source sequence at 4× speed; no cropping or trimming"
     },
     {
       "source": "icra(12).mp4",
@@ -195,14 +195,37 @@
       "fps": "30/1",
       "codec": "h264",
       "audio": "Removed; no audio stream",
-      "edit": "Full source sequence at 4\u00d7 speed; no cropping or trimming"
+      "edit": "Full source sequence at 4× speed; no cropping or trimming",
+      "superseded_by": "flower-robot-20261012.mp4"
+    },
+    {
+      "source": "My Movie 13.mp4",
+      "source_sha256": "139ae5735fea136aafb30518c55aa46d73225f66882b661cdb751e83f887cd34",
+      "file": "flower-robot-20261012.mp4",
+      "sha256": "a45f658ca1969a3ab449a99400aa3eb3b6ae6b6b98f240c8a6f0d2547ffce33c",
+      "poster": "flower-robot-20261012.jpg",
+      "poster_sha256": "401d7bf642dfe8419551aae29143deccf666b71257ca532dca58e43bf59991e7",
+      "poster_time_seconds": 2,
+      "source_duration_seconds": 3.5035,
+      "duration_seconds": 3.5035,
+      "width": 1280,
+      "height": 720,
+      "frames": 105,
+      "fps": "30000/1001",
+      "codec": "h264",
+      "audio": "No audio stream in supplied file",
+      "applied_speed_multiplier": 1,
+      "source_speed_multiplier": null,
+      "encoding": "Original H.264 video stream copied without re-encoding; faststart MP4",
+      "edit": "Full user-supplied replacement edit, 2026-10-12; no cropping, trimming, or retiming.",
+      "replaces": "flower-robot.mp4"
     }
   ],
   "notes": [
     "icra(4).mp4 duplicates icra(3).mp4 byte-for-byte.",
     "icra(7).mp4 is another robot paper-towel view; the third-person icra(2).mp4 is displayed.",
-    "Flower robot clip is displayed in full with an assistance note.",
     "Drawer human clip contains multiple demonstrations; timing is not matched to the robot.",
-    "Unmatched standalone pillow, books, toy and coffee clips, and the edited montage, are not paired speculatively."
+    "Unmatched standalone pillow, books, toy and coffee clips, and the edited montage, are not paired speculatively.",
+    "Flower robot replacement uses My Movie 13.mp4 in full, at its supplied timing. The existing assistance disclosure is retained without the previous near-the-end timing claim. The previous full export remains in provenance."
   ]
 }
