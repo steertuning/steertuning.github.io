@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="site-version" content="v2026.10.15.2"/>
+<meta name="site-version" content="v2026.10.15.3"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Steertuning Policies from a Few Human Videos | v2026.10.15.2</title>
+<title>Steertuning Policies from a Few Human Videos | v2026.10.15.3</title>
 <meta content="Billy Yan, Isaac Tu, Kelly Lee, Blake Chang, Kenny Ma, Kanad Patel, Dhawal Kabra, Neer Patel, Kevin Wu, Lerrel Pinto, Irmak Guzey" name="author"/>
 <meta content="Steertuning combines two-minute LoRA finetuning with demonstration-guided action steering to adapt robot policies from five human demonstrations. Research project page." name="description"/>
 <meta content="#fcf8f3" name="theme-color"/>
@@ -14,7 +14,7 @@
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%232f5d4a'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-family='Georgia' font-size='48' fill='%23fcf8f3'%3ES%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
 <link as="font" crossorigin="" href="assets/fonts/cormorant-garamond-normal-latin.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="assets/fonts/source-serif-4-normal-latin.woff2" rel="preload" type="font/woff2"/>
-<link href="style.css?v=3151204cb094" rel="stylesheet"/>
+<link href="style.css?v=101959cae168" rel="stylesheet"/>
 <link href="visitor-tracking.css?v=7cfae51e5f48" rel="stylesheet"/>
 <link href="figures.css?v=dfeb8496237a" rel="stylesheet"/>
 <link href="processing-motion.css?v=d6f7134a6d91" rel="stylesheet"/>
@@ -36,8 +36,8 @@
 <script defer="" src="charts.js?v=ae02b4f5dc0f"></script>
 <script defer="" src="plot-data.js?v=8da1460b7550"></script>
 <script defer="" src="plots.js?v=613e03c3695c"></script>
-<link href="simplify.css?v=2b9516f16be7" rel="stylesheet"/><link href="transfer.css?v=8eb4b1bf6c6b" rel="stylesheet"/><script defer="True" src="transfer.js?v=d895062b23ef"></script><link href="steering.css?v=f9aec4bf7426" rel="stylesheet"/><script defer="" src="steering.js?v=0317f3351a63"></script><link href="steering-coordinates.css?v=78d78edebc8f" rel="stylesheet"/><link href="story.css?v=275c19b3f4a3" rel="stylesheet"/><link href="dataset.css?v=b8ac4d398157" rel="stylesheet"/><link href="contact.css?v=2b7e5ce8b559" rel="stylesheet"/><script defer="" src="contact.js?v=cd8fb9cc04a5"></script><link href="playback-controls.css?v=8ab6b22129cf" rel="stylesheet"/><link href="typography.css?v=eafc7c4e029e" rel="stylesheet"/>
-<script defer="" src="dataset.js?v=254c4e52189a"></script><script defer src="task-demos.js?v=b08401c40f14"></script></head>
+<link href="simplify.css?v=2b9516f16be7" rel="stylesheet"/><link href="transfer.css?v=8eb4b1bf6c6b" rel="stylesheet"/><script defer="True" src="transfer.js?v=d895062b23ef"></script><link href="steering.css?v=f9aec4bf7426" rel="stylesheet"/><script defer="" src="steering.js?v=0317f3351a63"></script><link href="steering-coordinates.css?v=78d78edebc8f" rel="stylesheet"/><link href="story.css?v=1452ec6607ca" rel="stylesheet"/><link href="dataset.css?v=b8ac4d398157" rel="stylesheet"/><link href="contact.css?v=2b7e5ce8b559" rel="stylesheet"/><script defer="" src="contact.js?v=cd8fb9cc04a5"></script><link href="playback-controls.css?v=8ab6b22129cf" rel="stylesheet"/><link href="typography.css?v=5e1a237b3781" rel="stylesheet"/>
+<script defer="" src="dataset.js?v=254c4e52189a"></script><script defer src="task-demos.js?v=b08401c40f14"></script><script defer src="citation.js?v=db3faa5380be"></script></head>
 <body>
 <a class="skip-link" href="#abstract">Skip to research content</a>
 <main id="top"><header class="paper-header container">
@@ -46,23 +46,23 @@
 </h1>
 <div aria-label="Paper authors" class="authors">
 <div class="author-row">
-<span class="author"><a href="https://billy-yibo-yan.github.io/" rel="noopener" target="_blank">Billy Yan</a><sup>1</sup></span>
-<span class="author"><a href="https://www.linkedin.com/in/isaactu7/" rel="noopener" target="_blank">Isaac Tu</a><sup>1,*</sup></span>
-<span class="author"><a href="https://www.linkedin.com/in/kelly-lee-90a039260/" rel="noopener" target="_blank">Kelly Lee</a><sup>1,*</sup></span>
-<span class="author"><a href="https://blakechang.com/" rel="noopener" target="_blank">Blake Chang</a><sup>1</sup></span>
-<span class="author"><a href="https://kmang0.github.io/KMAWeb/" rel="noopener" target="_blank">Kenny Ma</a><sup>1</sup></span>
-<span class="author"><a href="https://kanadpatel.vercel.app/" rel="noopener" target="_blank">Kanad Patel</a><sup>1</sup></span>
+<span class="author"><a href="https://billy-yibo-yan.github.io/" rel="noopener" target="_blank">Billy Yan</a></span>
+<span class="author"><a href="https://www.linkedin.com/in/isaactu7/" rel="noopener" target="_blank">Isaac Tu</a><sup>*</sup></span>
+<span class="author"><a href="https://www.linkedin.com/in/kelly-lee-90a039260/" rel="noopener" target="_blank">Kelly Lee</a><sup>*</sup></span>
+<span class="author"><a href="https://blakechang.com/" rel="noopener" target="_blank">Blake Chang</a></span>
+<span class="author"><a href="https://kmang0.github.io/KMAWeb/" rel="noopener" target="_blank">Kenny Ma</a></span>
+<span class="author"><a href="https://kanadpatel.vercel.app/" rel="noopener" target="_blank">Kanad Patel</a></span>
 </div>
 <div class="author-row">
-<span class="author"><a href="https://www.linkedin.com/in/dhawal-kabra-850775229/" rel="noopener" target="_blank">Dhawal Kabra</a><sup>1</sup></span>
-<span class="author"><a href="https://neerpatel.vercel.app/" rel="noopener" target="_blank">Neer Patel</a><sup>1</sup></span>
-<span class="author"><a href="https://kevinywu.github.io/" rel="noopener" target="_blank">Kevin Wu</a><sup>1</sup></span>
-<span class="author"><a href="https://www.lerrelpinto.com/" rel="noopener" target="_blank">Lerrel Pinto</a><sup>1</sup></span>
-<span class="author"><a href="https://irmakguzey.github.io/" rel="noopener" target="_blank">Irmak Guzey</a><sup>1</sup></span>
+<span class="author"><a href="https://www.linkedin.com/in/dhawal-kabra-850775229/" rel="noopener" target="_blank">Dhawal Kabra</a></span>
+<span class="author"><a href="https://neerpatel.vercel.app/" rel="noopener" target="_blank">Neer Patel</a></span>
+<span class="author"><a href="https://kevinywu.github.io/" rel="noopener" target="_blank">Kevin Wu</a></span>
+<span class="author"><a href="https://www.lerrelpinto.com/" rel="noopener" target="_blank">Lerrel Pinto</a></span>
+<span class="author"><a href="https://irmakguzey.github.io/" rel="noopener" target="_blank">Irmak Guzey</a></span>
 </div>
 </div>
 <p class="affiliations">
-<span><sup>1</sup> New York University</span>
+<span> New York University</span>
 </p>
 <p class="contribution-note"><sup>*</sup> Equal contribution</p>
 <div aria-label="Research resources" class="publication-links">
@@ -409,9 +409,21 @@
 <p>This work was supported by grants from LG, Qualcomm, Honda, Microsoft, NSF award 2339096, ONR award N00014-22-1-2773 and Institute of Information &amp; Communications Technology Planning &amp; Evaluation (IITP) with a grant funded by the Ministry of Science and ICT (MSIT) of the Republic of Korea in connection with the Global AI Frontier Lab International Collaborative Research Agreement. (No. RS-2024-00469482 &amp; RS-2024-00509279). <a href="https://www.lerrelpinto.com/" rel="noopener" target="_blank">Lerrel Pinto</a> is supported by the Sloan, Packard, and CIFAR Fellowships.</p>
 <p>Artificial intelligence (AI) tools were used to improve the grammar and clarity of this paper. AI was not used to generate any of the text or references.</p>
 </section>
+<section aria-labelledby="citation-title" class="paper-section container" id="citation">
+<h2 id="citation-title"><span aria-hidden="true" class="section-number">10</span><span class="section-heading-text">BibTeX</span></h2>
+<div class="citation-intro"><p>If you find our work useful, please consider citing our paper.</p><button type="button" class="citation-copy" data-copy-citation aria-label="Copy BibTeX citation">Copy</button></div>
+<pre class="citation-code" tabindex="0" aria-label="BibTeX citation"><code id="citation-text">@article{yan2026steertuning,
+  title={Steertuning Policies from a Few Human Videos},
+  author={Billy Yan and Isaac Tu and Kelly Lee and Blake Chang and Kenny Ma and Kanad Patel and Dhawal Kabra and Neer Patel and Kevin Wu and Lerrel Pinto and Irmak Guzey},
+  journal={arXiv preprint arXiv:2610.18711},
+  year={2026},
+  url={https://arxiv.org/abs/2610.18711}
+}</code></pre>
+<p class="citation-status" role="status" aria-live="polite"></p>
+</section>
 </main>
 <footer class="page-footer container">
-<span>Steertuning v2026.10.15.2</span><a href="#top">Back to top</a>
+<span>Steertuning v2026.10.15.3</span><a href="#top">Back to top</a>
 </footer>
 <!-- Visitor statistics: https://mapmyvisitors.com/web/1c8w2 -->
 <script defer id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=f8GiW2EC7KspZO-7V0X7v9wspb0zs7t_-n9qK2pVe3Y&amp;cl=ffffff&amp;w=a"></script>
